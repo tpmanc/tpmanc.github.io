@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <script src='js/jquery-2.1.4.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+</head>
+<body>
+
+<div id="container">
+    <section id="one">
+        <div class="texture"></div>
+        <div class="holder">
+            <div id="slide1Text">
+                <h1>Веб-разработчик</h1>
+                <div class="quote-holder">
+                    <p class="quote">
+                        Большинство хороших программистов делают свою работу не потому, 
+                        что ожидают оплаты или признания, а потому что получают удовольствие от программирования.
+                    </p>
+                    <p class="author">
+                        &mdash; Linus Torvalds
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="two">
+        <div class="holder">
+            <div class="center" id="slide2Text">
+                <div class="text-column">
+                    <h2 id="slide2Title">Образование</h2>
+                    <div id="b2l1t" class="title">Уровень образования:</div> <div id="b2l1d" class="des">высшее</div> <br />
+                    <div id="b2l2t" class="title">Название учебного заведения:</div> <div id="b2l2d" class="des">МГТУ им. Н. Э. Баумана</div> <br />
+                    <div id="b2l3t" class="title">Специальность:</div> <div id="b2l3d" class="des">высшее</div> <br />
+                </div>
+                <img src="img/education-icon.png" id="b2i" alt="">
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="three">
+        <div class="holder">
+            <div class="center">
+                <img src="img/skills-icon.png" id="b3i" alt="">
+                <div class="text-column">
+                    <h2 id="slide3Title">Навыки</h2>
+                    <div id="b3l1t" class="title">Уровень образования:</div> <div id="b3l1d" class="des">высшее</div> <br />
+                    <div id="b3l2t" class="title">Название учебного заведения:</div> <div id="b3l2d" class="des">МГТУ им. Н. Э. Баумана</div> <br />
+                    <div id="b3l3t" class="title">Специальность:</div> <div id="b3l3d" class="des">высшее</div> <br />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="four">
+        <h2>Примеры работ</h1>
+        <p>Learn how to create a <strong>simple scrolling website</strong> using ScrollMagic</p>
+    </section>
+
+    <section id="five">
+        <h2>Контакты</h1>
+        <p>Learn how to create a <strong>simple scrolling website</strong> using ScrollMagic</p>
+    </section>
+</div>
+
+    
+    <script>
+
+    var controller = new ScrollMagic.Controller({
+        globalSceneOptions: {
+            // triggerHook: 'onLeave'
+        }
+    });
+
+    var wipeAnimation = new TimelineMax()
+            .fromTo("#two", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone, delay: 1})  // in from left
+            .to('#slide1Text', 3, {opacity: 0, left: '100%'}, '0')
+
+            .from('#slide2Title', 0.2, {autoAlpha: 0, left: '-300'}, '-=0.8')
+            .from('#b2i', 0.8, {scale: 0}, '-=0.8')
+            .from('#b2l1t', 0.4, {autoAlpha: 0, left: '-320'}, '-=0.8')
+            .from('#b2l1d', 0.6, {autoAlpha: 0, left: '-340'}, '-=0.8')
+
+            .from('#b2l2t', 0.8, {autoAlpha: 0, left: '-360'}, '-=0.8')
+            .from('#b2l2d', 1, {autoAlpha: 0, left: '-380'}, '-=0.8')
+
+            .from('#b2l3t', 1.2, {autoAlpha: 0, left: '-400'}, '-=0.8')
+            .from('#b2l3d', 1.3, {autoAlpha: 0, left: '-420'}, '-=0.8')
+
+            .fromTo("#three", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone, delay: 1})  // in from right
+
+            .from('#slide3Title', 0.2, {autoAlpha: 0, left: '+300', delay: 0.8}, '-=0.8')
+            .from('#b3i', 0.8, {scale: 0, delay: 0.7}, '-=0.8')
+            .from('#b3l1t', 0.4, {autoAlpha: 0, left: '+320'}, '-=0.8')
+            .from('#b3l1d', 0.6, {autoAlpha: 0, left: '+340'}, '-=0.8')
+
+            .from('#b3l2t', 0.8, {autoAlpha: 0, left: '+360'}, '-=0.8')
+            .from('#b3l2d', 1, {autoAlpha: 0, left: '+380'}, '-=0.8')
+
+            .from('#b3l3t', 1.2, {autoAlpha: 0, left: '+400'}, '-=0.8')
+            .from('#b3l3d', 1.3, {autoAlpha: 0, left: '+420'}, '-=0.8')
+
+            .fromTo("#four", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone, delay: 1}) // in from top
+            .fromTo("#five", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone, delay: 1}); // in from bottom
+
+    new ScrollMagic.Scene({
+        triggerElement: "#container",
+        triggerHook: 'onLeave',
+        duration: "1000%"
+    })
+    .setPin("#container")
+    .setTween(wipeAnimation)
+    .addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+    </script>
+</body>
+</html>
