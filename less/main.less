@@ -7,7 +7,7 @@
 
 html {
     height: 100%;
-    font-size: 22px;
+    font-size: 14px;
     
     body {
         font-family: Roboto;
@@ -110,8 +110,7 @@ html {
                         margin-top: 5%;
                         
                         img {
-                            max-width: 100%;
-                            max-height: 100%;
+                            width: 50px;
                         }
                     }
 
@@ -152,14 +151,13 @@ html {
                         margin-bottom: 5%;
                         
                         img {
-                            max-width: 100%;
-                            max-height: 100%;
+                            width: 50px;
                         }
                     }
 
                     .text-column {
                         
-                        #slide2Title {
+                        #slide3Title {
                             position: relative;
                         }
                         
@@ -198,14 +196,96 @@ html {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
     html {
-        font-size: 20px;
+        font-size: 14px;
+        
+        body {
+            #container {
+                section {
+                    &#two {
+                        .text-column {
+                            float: left;
+                        }
+
+                        .img-holder {
+                            float: left;
+                            width: auto;
+                            margin-left: 50px;
+                            margin-bottom: 0;
+                            margin-top: 100px;
+                            
+                            img {
+                                width: 80px;
+                            }
+                        }
+                    }
+
+                    &#three {
+                        .text-column {
+                            float: left;
+                        }
+
+                        .img-holder {
+                            float: left;
+                            width: auto;
+                            margin-right: 50px;
+                            margin-top: 202px;
+                            
+                            img {
+                                width: 80px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {
     html {
-        font-size: 18px;
+        font-size: 16px;
+        
+        body {
+            #container {
+                section {
+                    &#two {
+                        .text-column {
+                            float: left;
+                        }
+
+                        .img-holder {
+                            float: left;
+                            width: auto;
+                            margin-left: 50px;
+                            margin-bottom: 0;
+                            margin-top: 100px;
+                            
+                            img {
+                                width: 120px;
+                            }
+                        }
+                    }
+
+                    &#three {
+                        .text-column {
+                            float: left;
+                        }
+
+                        .img-holder {
+                            float: left;
+                            width: auto;
+                            margin-right: 50px;
+                            margin-top: 202px;
+                            
+                            img {
+                                width: 120px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -225,8 +305,12 @@ html {
                         .img-holder {
                             float: left;
                             width: auto;
-                            padding-left: 50px;
+                            margin-left: 50px;
                             margin-top: 38px;
+
+                            img {
+                                width: 192px;
+                            }
                         }
                     }
 
@@ -238,9 +322,13 @@ html {
                         .img-holder {
                             float: left;
                             width: auto;
-                            padding-right: 50px;
+                            margin-right: 50px;
                             margin-bottom: 0;
                             margin-top: 169px;
+
+                            img {
+                                width: 192px;
+                            }
                         }
                     }
                 }
