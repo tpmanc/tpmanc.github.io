@@ -9,318 +9,226 @@
     <link rel="icon" type="image/png" href="img/favicon16.png" />
     <link rel="apple-touch-icon-precomposed" href="img/favicon57.png"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/main.css">
-    <script src='js/jquery-2.1.4.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
-    <script src="js/plugins/jquery.arcticmodal-0.3.min.js"></script>
+    <link rel="stylesheet" href="production/main.css">
+    <script src='production/main.min.js'></script>
 </head>
 <body>
 
-<div class="modal-holder">
-    <div class="box-modal" id="exampleModal">
-        <div class="box-modal_close arcticmodal-close">закрыть</div>
-        Пример модального окна
+    <div class="modal-holder">
+        <div class="box-modal" id="exampleModal">
+            <div class="box-modal_close arcticmodal-close">закрыть</div>
+            Пример модального окна
+        </div>
     </div>
-</div>
 
-<div id="container">
-    <section id="one">
-        <div class="texture"></div>
-        <div class="holder">
-            <div id="slide1Text">
-                <h1>Веб-разработчик</h1>
-                <div class="quote-holder">
-                    <p class="quote">
-                        Большинство хороших программистов делают свою работу не потому, 
-                        что ожидают оплаты или признания, а потому что получают удовольствие от программирования.
-                    </p>
-                    <p class="author">
-                        &mdash; Linus Torvalds
-                    </p>
+    <div id="container">
+        <section id="one">
+            <div class="texture"></div>
+            <div class="holder">
+                <div id="slide1Text">
+                    <h1>Веб-разработчик</h1>
+                    <div class="quote-holder">
+                        <p class="quote">
+                            Большинство хороших программистов делают свою работу не потому, 
+                            что ожидают оплаты или признания, а потому что получают удовольствие от программирования.
+                        </p>
+                        <p class="author">
+                            &mdash; Linus Torvalds
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="two">
-        <div class="holder">
-            <div class="center" id="slide2Text">
-                <div class="text-column">
-                    <h2 id="slide2Title">Образование</h2>
-                    <div id="b2l1t" class="title">Уровень образования:</div> <div id="b2l1d" class="des">высшее</div>
-                    <hr />
-                    <div id="b2l2t" class="title">Название учебного заведения:</div> <div id="b2l2d" class="des">МГТУ им. Н. Э. Баумана</div>
-                    <hr />
-                    <div id="b2l3t" class="title">Специальность:</div> <div id="b2l3d" class="des">Вычислительные машины, комплексы, системы и сети</div>
-                </div>
-                <div class="img-holder">
-                    <img src="img/education-icon.png" id="b2i" alt="">
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="three">
-        <div class="holder">
-            <div class="center">
-                <div class="img-holder">
-                    <img src="img/skills-icon.png" id="b3i" alt="">
-                </div>
-                <div class="text-column">
-                    <h2 id="slide3Title">Навыки</h2>
-                    <div id="b3l1t" class="title">Веб порграмирование:</div> <div id="b3l1d" class="des">
-                        HTML5, CSS 3, JavaScript, PHP, Node.js
+        <section id="two">
+            <div class="holder">
+                <div class="center" id="slide2Text">
+                    <div class="text-column">
+                        <h2 id="slide2Title">Образование</h2>
+                        <div id="b2l1t" class="title">Уровень образования:</div> <div id="b2l1d" class="des">высшее</div>
+                        <hr />
+                        <div id="b2l2t" class="title">Название учебного заведения:</div> <div id="b2l2d" class="des">МГТУ им. Н. Э. Баумана</div>
+                        <hr />
+                        <div id="b2l3t" class="title">Специальность:</div> <div id="b2l3d" class="des">Вычислительные машины, комплексы, системы и сети</div>
                     </div>
-                    <hr />
-                    <div id="b3l2t" class="title">Базы данных:</div> <div id="b3l2d" class="des">
-                        MySQL, PostgreSQL, Redis, MongoDB
+                    <div class="img-holder">
+                        <img src="img/education-icon.png" id="b2i" alt="">
                     </div>
-                    <hr />
-                    <div id="b3l3t" class="title">Веб-технологии:</div> <div id="b3l3d" class="des">
-                        Yii framework, Yii 2 framework, Git, AJAX, RequireJS, jQuery, Bootstrap, AngularJS, 
-                        Web Sockets, Twig, Memcache, Nginx, Apache, less, Gulp js
-                    </div>
-                    <hr />
-                    <div id="b3l4t" class="title">Прикладное программирование:</div> <div id="b3l4d" class="des">Java</div>
-                    <hr />
-                    <div id="b3l5t" class="title">Мобильное программирование:</div> <div id="b3l5d" class="des">Java for Android</div>
-                    <hr />
-                    <div id="b3l6t" class="title">Общие навыки:</div> <div id="b3l6d" class="des">
-                        Администрирование веб-сайтов, Adobe Photoshop, Windows OS, MAC OS X, Linux
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="four">
-        <div class="holder">
-            <div class="center">
-                <h2 id="slide4Title">Примеры работ</h2>
-                <div id="gallery">
-                    <div class="elem" id="ex1">
-                        <div class="preview">
-                            <img src="img/previews/med-serdce.png" alt="" 
-                                data-img="img/sites/med-serdce.png"
-                                data-title="Интернет-магазин «Сердце»"
-                                data-des=""
-                                data-link="http://med-serdce.ru/"
-                            />
-                        </div>
-                        <a href="http://med-serdce.ru/" target="_blank" class="title">Интернет-магазин «Сердце»</a>
-                    </div>
-                    <div class="elem" id="ex2">
-                        <div class="preview">
-                            <img src="img/previews/beurer-live.png" alt="" 
-                                data-img="img/sites/beurer-live.png"
-                                data-title="Официальный сайт компании «Beurer»"
-                                data-des=""
-                                data-link="http://beurer-live.ru/"
-                            />
-                        </div>
-                        <a href="http://beurer-live.ru/" target="_blank" class="title">Официальный сайт компании «Beurer»</a>
-                    </div>
-                    <div class="elem" id="ex3">
-                        <div class="preview">
-                            <img src="img/previews/dom-otoplenie.png" alt="" 
-                                data-img="img/sites/dom-otoplenie.png"
-                                data-title="«Замена батарей отопления»"
-                                data-des=""
-                                data-link="http://dom-otoplenie.ru/"
-                            />
-                        </div>
-                        <a href="http://dom-otoplenie.ru/" target="_blank" class="title">«Замена батарей отопления»</a>
-                    </div>
-                    <div class="elem" id="ex4">
-                        <div class="preview">
-                            <img src="img/previews/5pravil.png" alt="" 
-                                data-img="img/sites/5pravil.png"
-                                data-title="Интернет-магазин детских товаров «5 правил»"
-                                data-des=""
-                                data-link="http://5pravil.ru/"
-                            />
-                        </div>
-                        <a href="http://5pravil.ru/" target="_blank" class="title">Интернет-магазин «5 правил»</a>
-                    </div>
-                    <div class="elem" id="ex5">
-                        <div class="preview">
-                            <img src="img/previews/medisana-market.png" alt="" 
-                                data-img="img/sites/medisana-market.png"
-                                data-title="Официальный интернет-магазин «Medisana-market»"
-                                data-des=""
-                                data-link="http://medisana-market.ru/"
-                            />
-                        </div>
-                        <a href="http://medisana-market.ru/" target="_blank" class="title">Официальный интернет-магазин «Medisana-market»</a>
-                    </div>
-                    <div class="elem" id="ex6">
-                        <div class="preview">
-                            <img src="img/previews/gardena-market.png" alt="" 
-                                data-img="img/sites/gardena-market.png"
-                                data-title="Интернет-магазин садовой техники «Gardena-market»"
-                                data-des=""
-                                data-link="http://gardena-market.ru/"
-                            />
-                        </div>
-                        <a href="http://gardena-market.ru/" target="_blank" class="title">Интернет-магазин садовой техники «Gardena-market»</a>
-                    </div>
-                    <div class="elem" id="ex7">
-                        <div class="preview">
-                            <img src="img/previews/arenda-kompressorov.png" alt="" 
-                                data-img="img/sites/arenda-kompressorov.png"
-                                data-title="«Аренда компрессоров»"
-                                data-des=""
-                                data-link="http://arenda-kompressorov.ru/"
-                            />
-                        </div>
-                        <a href="http://arenda-kompressorov.ru/" target="_blank" class="title">«Аренда компрессоров»</a>
-                    </div>
-                    <div class="elem" id="ex8">
-                        <div class="preview">
-                            <img src="img/previews/pl-beg.png" alt="" 
-                                data-img="img/sites/pl-beg.png"
-                                data-title="Интернет-магазин детских товаров «Плюшевый бегемот»"
-                                data-des=""
-                                data-link="http://pl-beg.ru/"
-                            />
-                        </div>
-                        <a href="http://pl-beg.ru/" target="_blank" class="title">Магазин детских товаров «Плюшевый бегемот»</a>
-                    </div>
-                    <div class="elem" id="ex9">
-                        <div class="preview">
-                            <img src="img/previews/nov-vek.png" alt="" 
-                                data-img="img/sites/nov-vek.png"
-                                data-title="Сайт компании «Новый Век»"
-                                data-des=""
-                                data-link="http://nov-vek.ru/"
-                            />
-                        </div>
-                        <a href="http://nov-vek.ru/" target="_blank" class="title">Сайт компании «Новый Век»</a>
-                    </div>
-                    <div class="elem" id="ex10">
-                        <div class="preview">
-                            <img src="img/previews/milaya-ledy.png" alt="" 
-                                data-img="img/sites/milaya-ledy.png"
-                                data-title="Интернет магазин «Милая Леди»"
-                                data-des=""
-                                data-link="http://milaya-ledy.ru/"
-                            />
-                        </div>
-                        <a href="http://milaya-ledy.ru/" target="_blank" class="title">Интернет магазин «Милая Леди»</a>
-                    </div>
-                    <div class="elem" id="ex11">
-                        <div class="preview">
-                            <img src="img/previews/breathing-exercise.png" alt="" 
-                                data-img="img/sites/breathing-exercise.png"
-                                data-title="Приложение «Тренировка дыхания» для Android"
-                                data-des=""
-                                data-link="https://play.google.com/store/apps/details?id=com.breathing_exercise"
-                            />
-                        </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.breathing_exercise" target="_blank" class="title">Приложение «Тренировка дыхания» для Android</a>
-                    </div>
-
+                    <div class="clearfix"></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="five">
-        <h2>Контакты</h1>
-        <p>Learn how to create a <strong>simple scrolling website</strong> using ScrollMagic</p>
-    </section>
-</div>
+        <section id="three">
+            <div class="holder">
+                <div class="center">
+                    <div class="img-holder">
+                        <img src="img/skills-icon.png" id="b3i" alt="">
+                    </div>
+                    <div class="text-column">
+                        <h2 id="slide3Title">Навыки</h2>
+                        <div id="b3l1t" class="title">Веб порграмирование:</div> <div id="b3l1d" class="des">
+                            HTML5, CSS 3, JavaScript, PHP, Node.js
+                        </div>
+                        <hr />
+                        <div id="b3l2t" class="title">Базы данных:</div> <div id="b3l2d" class="des">
+                            MySQL, PostgreSQL, Redis, MongoDB
+                        </div>
+                        <hr />
+                        <div id="b3l3t" class="title">Веб-технологии:</div> <div id="b3l3d" class="des">
+                            Yii framework, Yii 2 framework, Git, AJAX, RequireJS, jQuery, Bootstrap, AngularJS, 
+                            Web Sockets, Twig, Memcache, Nginx, Apache, less, Gulp js
+                        </div>
+                        <hr />
+                        <div id="b3l4t" class="title">Прикладное программирование:</div> <div id="b3l4d" class="des">Java</div>
+                        <hr />
+                        <div id="b3l5t" class="title">Мобильное программирование:</div> <div id="b3l5d" class="des">Java for Android</div>
+                        <hr />
+                        <div id="b3l6t" class="title">Общие навыки:</div> <div id="b3l6d" class="des">
+                            Администрирование веб-сайтов, Adobe Photoshop, Windows OS, MAC OS X, Linux
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </section>
 
-    
-    <script>
+        <section id="four">
+            <div class="holder">
+                <div class="center">
+                    <h2 id="slide4Title">Примеры работ</h2>
+                    <div id="gallery">
+                        <div class="elem" id="ex1">
+                            <div class="preview">
+                                <img src="img/previews/med-serdce.png" alt="" 
+                                    data-img="img/sites/med-serdce.png"
+                                    data-title="Интернет-магазин «Сердце»"
+                                    data-des=""
+                                    data-link="http://med-serdce.ru/"
+                                />
+                            </div>
+                            <a href="http://med-serdce.ru/" target="_blank" class="title">Интернет-магазин «Сердце»</a>
+                        </div>
+                        <div class="elem" id="ex2">
+                            <div class="preview">
+                                <img src="img/previews/beurer-live.png" alt="" 
+                                    data-img="img/sites/beurer-live.png"
+                                    data-title="Официальный сайт компании «Beurer»"
+                                    data-des=""
+                                    data-link="http://beurer-live.ru/"
+                                />
+                            </div>
+                            <a href="http://beurer-live.ru/" target="_blank" class="title">Официальный сайт компании «Beurer»</a>
+                        </div>
+                        <div class="elem" id="ex3">
+                            <div class="preview">
+                                <img src="img/previews/dom-otoplenie.png" alt="" 
+                                    data-img="img/sites/dom-otoplenie.png"
+                                    data-title="«Замена батарей отопления»"
+                                    data-des=""
+                                    data-link="http://dom-otoplenie.ru/"
+                                />
+                            </div>
+                            <a href="http://dom-otoplenie.ru/" target="_blank" class="title">«Замена батарей отопления»</a>
+                        </div>
+                        <div class="elem" id="ex4">
+                            <div class="preview">
+                                <img src="img/previews/5pravil.png" alt="" 
+                                    data-img="img/sites/5pravil.png"
+                                    data-title="Интернет-магазин детских товаров «5 правил»"
+                                    data-des=""
+                                    data-link="http://5pravil.ru/"
+                                />
+                            </div>
+                            <a href="http://5pravil.ru/" target="_blank" class="title">Интернет-магазин «5 правил»</a>
+                        </div>
+                        <div class="elem" id="ex5">
+                            <div class="preview">
+                                <img src="img/previews/medisana-market.png" alt="" 
+                                    data-img="img/sites/medisana-market.png"
+                                    data-title="Официальный интернет-магазин «Medisana-market»"
+                                    data-des=""
+                                    data-link="http://medisana-market.ru/"
+                                />
+                            </div>
+                            <a href="http://medisana-market.ru/" target="_blank" class="title">Официальный интернет-магазин «Medisana-market»</a>
+                        </div>
+                        <div class="elem" id="ex6">
+                            <div class="preview">
+                                <img src="img/previews/gardena-market.png" alt="" 
+                                    data-img="img/sites/gardena-market.png"
+                                    data-title="Интернет-магазин садовой техники «Gardena-market»"
+                                    data-des=""
+                                    data-link="http://gardena-market.ru/"
+                                />
+                            </div>
+                            <a href="http://gardena-market.ru/" target="_blank" class="title">Интернет-магазин садовой техники «Gardena-market»</a>
+                        </div>
+                        <div class="elem" id="ex7">
+                            <div class="preview">
+                                <img src="img/previews/arenda-kompressorov.png" alt="" 
+                                    data-img="img/sites/arenda-kompressorov.png"
+                                    data-title="«Аренда компрессоров»"
+                                    data-des=""
+                                    data-link="http://arenda-kompressorov.ru/"
+                                />
+                            </div>
+                            <a href="http://arenda-kompressorov.ru/" target="_blank" class="title">«Аренда компрессоров»</a>
+                        </div>
+                        <div class="elem" id="ex8">
+                            <div class="preview">
+                                <img src="img/previews/pl-beg.png" alt="" 
+                                    data-img="img/sites/pl-beg.png"
+                                    data-title="Интернет-магазин детских товаров «Плюшевый бегемот»"
+                                    data-des=""
+                                    data-link="http://pl-beg.ru/"
+                                />
+                            </div>
+                            <a href="http://pl-beg.ru/" target="_blank" class="title">Магазин детских товаров «Плюшевый бегемот»</a>
+                        </div>
+                        <div class="elem" id="ex9">
+                            <div class="preview">
+                                <img src="img/previews/nov-vek.png" alt="" 
+                                    data-img="img/sites/nov-vek.png"
+                                    data-title="Сайт компании «Новый Век»"
+                                    data-des=""
+                                    data-link="http://nov-vek.ru/"
+                                />
+                            </div>
+                            <a href="http://nov-vek.ru/" target="_blank" class="title">Сайт компании «Новый Век»</a>
+                        </div>
+                        <div class="elem" id="ex10">
+                            <div class="preview">
+                                <img src="img/previews/milaya-ledy.png" alt="" 
+                                    data-img="img/sites/milaya-ledy.png"
+                                    data-title="Интернет магазин «Милая Леди»"
+                                    data-des=""
+                                    data-link="http://milaya-ledy.ru/"
+                                />
+                            </div>
+                            <a href="http://milaya-ledy.ru/" target="_blank" class="title">Интернет магазин «Милая Леди»</a>
+                        </div>
+                        <div class="elem" id="ex11">
+                            <div class="preview">
+                                <img src="img/previews/breathing-exercise.png" alt="" 
+                                    data-img="img/sites/breathing-exercise.png"
+                                    data-title="Приложение «Тренировка дыхания» для Android"
+                                    data-des=""
+                                    data-link="https://play.google.com/store/apps/details?id=com.breathing_exercise"
+                                />
+                            </div>
+                            <a href="https://play.google.com/store/apps/details?id=com.breathing_exercise" target="_blank" class="title">Приложение «Тренировка дыхания» для Android</a>
+                        </div>
 
-    var controller = new ScrollMagic.Controller({
-        globalSceneOptions: {
-            // triggerHook: 'onLeave'
-        }
-    });
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    var wipeAnimation = new TimelineMax()
-            .fromTo("#two", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone, delay: 2})  // in from left
-            .to('#slide1Text', 3, {opacity: 0, left: '100%', delay: 1}, '0')
-
-            .from('#slide2Title', 0.6, {autoAlpha: 0, left: '-300'}, '-=0.8')
-            .from('#b2i', 0.8, {scale: 0}, '-=0.8')
-            .from('#two hr', 0.8, {scale: 0}, '-=0.8')
-            .from('#b2l1t', 0.4, {autoAlpha: 0, left: '-320'}, '-=0.8')
-            .from('#b2l1d', 0.6, {autoAlpha: 0, left: '-340'}, '-=0.8')
-
-            .from('#b2l2t', 0.8, {autoAlpha: 0, left: '-360'}, '-=0.8')
-            .from('#b2l2d', 1, {autoAlpha: 0, left: '-380'}, '-=0.8')
-
-            .from('#b2l3t', 1.2, {autoAlpha: 0, left: '-400'}, '-=0.8')
-            .from('#b2l3d', 1.3, {autoAlpha: 0, left: '-420'}, '-=0.8')
-
-            .fromTo("#three", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone, delay: 2})  // in from right
-
-            .from('#slide3Title', 0.6, {autoAlpha: 0, left: '+300', delay: 1}, '-=0.8')
-            .from('#b3i', 0.8, {scale: 0, delay: 1}, '-=0.8')
-            .from('#three hr', 0.8, {scale: 0}, '-=0.8')
-            .from('#b3l1t', 0.4, {autoAlpha: 0, left: '+320'}, '-=0.8')
-            .from('#b3l1d', 0.6, {autoAlpha: 0, left: '+340'}, '-=0.8')
-
-            .from('#b3l2t', 0.8, {autoAlpha: 0, left: '+360'}, '-=0.8')
-            .from('#b3l2d', 1, {autoAlpha: 0, left: '+380'}, '-=0.8')
-
-            .from('#b3l3t', 1.2, {autoAlpha: 0, left: '+400'}, '-=0.8')
-            .from('#b3l3d', 1.3, {autoAlpha: 0, left: '+420'}, '-=0.8')
-
-            .from('#b3l4t', 1.2, {autoAlpha: 0, left: '+400'}, '-=0.8')
-            .from('#b3l4d', 1.3, {autoAlpha: 0, left: '+420'}, '-=0.8')
-
-            .from('#b3l5t', 1.2, {autoAlpha: 0, left: '+400'}, '-=0.8')
-            .from('#b3l5d', 1.2, {autoAlpha: 0, left: '+420'}, '-=0.8')
-
-            .from('#b3l6t', 1.2, {autoAlpha: 0, left: '+400'}, '-=0.8')
-            .from('#b3l6d', 1.2, {autoAlpha: 0, left: '+420'}, '-=0.8')
-
-            .fromTo("#four", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone, delay: 2}) // in from top
-
-            .from('#slide4Title', 0.6, {autoAlpha: 0, top: '-50', delay: 1}, '-=0.8')
-            .from('#ex1', 0.4, {autoAlpha: 0, top: '-55'}, '-=0.8')
-            .from('#ex2', 0.6, {autoAlpha: 0, top: '-60'}, '-=0.8')
-            .from('#ex3', 0.8, {autoAlpha: 0, top: '-65'}, '-=0.8')
-            .from('#ex4', 1, {autoAlpha: 0, top: '-70'}, '-=0.8')
-            .from('#ex5', 1.2, {autoAlpha: 0, top: '-75'}, '-=0.8')
-            .from('#ex6', 1.3, {autoAlpha: 0, top: '-80'}, '-=0.8')
-            .from('#ex7', 1.2, {autoAlpha: 0, top: '-85'}, '-=0.8')
-            .from('#ex8', 1.3, {autoAlpha: 0, top: '-90'}, '-=0.8')
-            .from('#ex9', 1.2, {autoAlpha: 0, top: '-95'}, '-=0.8')
-            .from('#ex10', 1.2, {autoAlpha: 0, top: '-100'}, '-=0.8')
-            .from('#ex11', 1.2, {autoAlpha: 0, top: '-105'}, '-=0.8')
-
-            .fromTo("#five", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone, delay: 2}); // in from bottom
-
-    new ScrollMagic.Scene({
-        triggerElement: "#container",
-        triggerHook: 'onLeave',
-        duration: "800%"
-    })
-    .setPin("#container")
-    .setTween(wipeAnimation)
-    .addIndicators()
-    .addTo(controller);
-
-    $('#gallery img').on('click', function(){
-        var img = $(this).data('img');
-        var c = $('<div class="box-modal" />');
-            c.html('<img src="' + img + '">');
-            c.prepend('<div class="box-modal_close arcticmodal-close">X</div>');
-            $.arcticmodal({
-                content: c
-        });
-    });
-
-    </script>
+        <section id="five">
+            <h2>Контакты</h1>
+            <p>Learn how to create a <strong>simple scrolling website</strong> using ScrollMagic</p>
+        </section>
+    </div>
 </body>
 </html>
