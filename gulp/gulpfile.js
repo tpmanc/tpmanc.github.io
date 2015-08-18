@@ -21,11 +21,13 @@ gulp.task('less', function() {
 gulp.task('js', function() {
     gulp.src([
             '../js/plugins/jquery-2.1.4.min.js',
+            '../js/plugins/jquery-migrate-1.2.1.min.js',
             '../js/plugins/TweenMax.min.js',
             '../js/plugins/jquery.ScrollMagic.min.js',
             '../js/plugins/animation.gsap.min.js',
             '../js/plugins/debug.addIndicators.min.js',
             '../js/plugins/jquery.arcticmodal-0.3.min.js',
+            '../js/plugins/slick.min.js',
             '../js/main.js',
         ])
     .pipe(concat('main.min.js'))

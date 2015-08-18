@@ -1,4 +1,11 @@
 $(function(){
+    $('#gallery').slick({
+        centerMode: true,
+        slide: '.elem',
+        centerPadding: '60px',
+        slidesToShow: 5
+    });
+
     var controller = new ScrollMagic.Controller({
         globalSceneOptions: {
             // triggerHook: 'onLeave'
@@ -47,19 +54,9 @@ $(function(){
             .fromTo("#four", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone, delay: 2}) // in from top
 
             .from('#slide4Title', 0.6, {autoAlpha: 0, top: '-50', delay: 1}, '-=0.8')
-            .from('#ex1', 0.4, {autoAlpha: 0, top: '-55'}, '-=0.8')
-            .from('#ex2', 0.6, {autoAlpha: 0, top: '-60'}, '-=0.8')
-            .from('#ex3', 0.8, {autoAlpha: 0, top: '-65'}, '-=0.8')
-            .from('#ex4', 1, {autoAlpha: 0, top: '-70'}, '-=0.8')
-            .from('#ex5', 1.2, {autoAlpha: 0, top: '-75'}, '-=0.8')
-            .from('#ex6', 1.3, {autoAlpha: 0, top: '-80'}, '-=0.8')
-            .from('#ex7', 1.2, {autoAlpha: 0, top: '-85'}, '-=0.8')
-            .from('#ex8', 1.3, {autoAlpha: 0, top: '-90'}, '-=0.8')
-            .from('#ex9', 1.2, {autoAlpha: 0, top: '-95'}, '-=0.8')
-            .from('#ex10', 1.2, {autoAlpha: 0, top: '-100'}, '-=0.8')
-            .from('#ex11', 1.2, {autoAlpha: 0, top: '-105'}, '-=0.8')
+            .from('#gallery img', 1.4, {autoAlpha: 0, top: '-55', scale: 0, delay: 0.8}, '-=0.8')
 
-            .fromTo("#five", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone, delay: 2}); // in from bottom
+            .fromTo("#five", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone, delay: 2.5}); // in from bottom
 
     new ScrollMagic.Scene({
         triggerElement: "#container",
