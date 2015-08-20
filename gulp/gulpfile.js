@@ -20,6 +20,7 @@ gulp.task('less', function() {
 
 gulp.task('js', function() {
     gulp.src([
+            '../js/plugins/modernizr.js',
             '../js/plugins/jquery-2.1.4.min.js',
             '../js/plugins/jquery-migrate-1.2.1.min.js',
             '../js/plugins/TweenMax.min.js',

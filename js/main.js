@@ -105,4 +105,15 @@ $(function(){
                 content: c
         });
     });
+
+    $('html.touch #gallery .elem').on('click', function(e){
+        $('#gallery .elem.active').removeClass('active');
+        $(this).addClass('active');
+        e.stopPropagation();
+    });
+
+    var body = $('body');
+    body.on('click', function(){
+        $('#gallery .elem.active').removeClass('active');
+    });
 });
