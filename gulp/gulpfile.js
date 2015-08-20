@@ -4,7 +4,7 @@ var concat = require('gulp-concat');
 var csso = require('gulp-csso');
 var watch = require('gulp-watch');
 var autoprefixer = require('gulp-autoprefixer');
-var imageop = require('gulp-image-optimization');
+// var imageop = require('gulp-image-optimization');
 var uglify = require('gulp-uglify');
 
 gulp.task('less', function() {

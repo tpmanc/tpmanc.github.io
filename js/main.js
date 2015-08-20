@@ -54,7 +54,7 @@ $(function(){
             .fromTo("#four", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone, delay: 2}) // in from top
 
             .from('#slide4Title', 0.6, {autoAlpha: 0, top: '-50', delay: 1}, '-=0.8')
-            .from('#gallery img', 1.4, {autoAlpha: 0, top: '-55', scale: 0, delay: 0.8}, '-=0.8')
+            .from('#gallery .elem', 1.4, {autoAlpha: 0, top: '-55', scale: 0, delay: 0.8}, '-=0.8')
 
             .fromTo("#five", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone, delay: 2.5}); // in from bottom
 
@@ -68,8 +68,8 @@ $(function(){
     .addIndicators()
     .addTo(controller);
 
-    $('#gallery img').on('click', function(){
-        var img = $(this).data('img');
+    $('#gallery .zoom').on('click', function(){
+        var img = $(this).closest('a').data('href');
         var c = $('<div class="box-modal" />');
             c.html('<img src="' + img + '">');
             c.prepend('<div class="box-modal_close arcticmodal-close">X</div>');
