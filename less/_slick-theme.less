@@ -16,8 +16,8 @@
 
     display: block;
 
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     margin-top: -10px;
     padding: 0;
 
@@ -35,7 +35,6 @@
 {
     color: transparent;
     outline: none;
-    background: transparent;
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,
@@ -66,37 +65,25 @@
 .slick-prev
 {
     left: -25px;
+    background: url('../img/arrow-left.png');
+    background-size: cover;
 }
 [dir='rtl'] .slick-prev
 {
     right: -25px;
     left: auto;
 }
-.slick-prev:before
-{
-    content: '←';
-}
-[dir='rtl'] .slick-prev:before
-{
-    content: '→';
-}
 
 .slick-next
 {
     right: -25px;
+    background: url('../img/arrow-right.png');
+    background-size: cover;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
     left: -25px;
-}
-.slick-next:before
-{
-    content: '→';
-}
-[dir='rtl'] .slick-next:before
-{
-    content: '←';
 }
 
 /* Dots */
@@ -185,4 +172,29 @@
 {
     opacity: .75;
     color: black;
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+    .slick-prev, .slick-next {
+        width: 55px;
+        height: 55px;
+    }
+    .slick-prev {
+        left: -55px;
+    }
+    .slick-next {
+        right: -55px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+    
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+    
 }

@@ -3,7 +3,33 @@ $(function(){
         centerMode: true,
         slide: '.elem',
         centerPadding: '60px',
-        slidesToShow: 5
+        slidesToShow: 5,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
 
     var controller = new ScrollMagic.Controller({
@@ -55,6 +81,8 @@ $(function(){
 
             .from('#slide4Title', 0.6, {autoAlpha: 0, top: '-50', delay: 1}, '-=0.8')
             .from('#gallery .elem', 1.4, {autoAlpha: 0, top: '-55', scale: 0, delay: 0.8}, '-=0.8')
+            .from('#gallery .slick-prev', 1, {autoAlpha: 0}, '-=0.8')
+            .from('#gallery .slick-next', 1, {autoAlpha: 0}, '-=0.8')
 
             .fromTo("#five", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone, delay: 2.5}); // in from bottom
 
