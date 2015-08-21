@@ -32,6 +32,10 @@ $(function(){
         ]
     });
 
+    $('#gallery').on('reInit', function(event, slick){
+        console.log('anus');
+    });
+
     var controller = new ScrollMagic.Controller({
         globalSceneOptions: {
             // triggerHook: 'onLeave'
@@ -80,9 +84,7 @@ $(function(){
             .fromTo("#four", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone, delay: 2}) // in from top
 
             .from('#slide4Title', 0.6, {autoAlpha: 0, top: '-50', delay: 1}, '-=0.8')
-            .from('#gallery .elem', 1.4, {autoAlpha: 0, top: '-55', scale: 0, delay: 0.8}, '-=0.8')
-            .from('#gallery .slick-prev', 1, {autoAlpha: 0}, '-=0.8')
-            .from('#gallery .slick-next', 1, {autoAlpha: 0}, '-=0.8')
+            .from('#gallery', 1.4, {autoAlpha: 0, top: '-55', delay: 0.8}, '-=0.8')
 
             .fromTo("#five", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone, delay: 2.5}); // in from bottom
 
