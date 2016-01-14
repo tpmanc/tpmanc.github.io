@@ -1,273 +1,724 @@
 <!DOCTYPE html>
-<html lang="ru">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Чуканцев Никита - Веб-разработчик</title>
-    <meta name="keywords" content="Сайт, разработка, создание, веб, программирование, веб-программирование, услуги" />
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="keywords" content="">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100' rel='stylesheet' type='text/css'>
+    <link href="production/main.min.css" rel="stylesheet">
+    
     <link rel="icon" type="image/png" href="img/favicon16.png" />
     <link rel="apple-touch-icon-precomposed" href="img/favicon57.png"/>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="production/main.css">
-    <script src='production/main.min.js'></script>
-</head>
-<body>
 
-    <div class="modal-holder">
-        <div class="box-modal" id="exampleModal">
-            <div class="box-modal_close arcticmodal-close">закрыть</div>
-            Пример модального окна
+    <!-- Responsivity for older IE -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body data-spy="scroll" data-target="#navigation" data-offset="120">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand scrollTo full" href="#intro">Чуканцев Никита</a>
+                <a class="navbar-brand scrollTo small" href="#intro">ЧН</a>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navigation">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#intro">Главная</a>
+                    </li>
+                    <li><a href="#education">Образование</a></li>
+                    <li><a href="#skills">Навыки</a></li>
+                    <li><a href="#works">Примеры работ</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <div id="container">
-        <section id="one">
-            <div class="texture"></div>
-            <div class="holder">
-                <div id="slide1Text">
-                    <h1>Веб-разработчик</h1>
-                    <div class="quote-holder">
-                        <p class="quote">
-                            Большинство хороших программистов делают свою работу не потому, 
-                            что ожидают оплаты или признания, а потому что получают удовольствие от программирования.
-                        </p>
-                        <p class="author">
-                            &mdash; Linus Torvalds
-                        </p>
+    <div id="all">
+        <div id="intro" class="clearfix">
+            <div class="item">
+                <div class="container">
+                    <div class="row">
+                        <div class="carousel-caption">
+                            <h1 data-animate="fadeInDown">Веб-разработчик</h1>
+                            <div class="quote" data-animate="slideInUp">
+                                 Большинство хороших программистов делают свою работу не потому, 
+                                 что ожидают оплаты или признания, а потому что получают удовольствие от программирования.
+                            </div>
+                            <div class="author" data-animate="slideInUp">— Linus Torvalds</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section id="two">
-            <div class="holder">
-                <div class="center" id="slide2Text">
-                    <div class="text-column">
-                        <h2 id="slide2Title">Образование</h2>
-                        <div id="b2l1t" class="title">Уровень образования:</div> <div id="b2l1d" class="des">высшее</div>
-                        <hr />
-                        <div id="b2l2t" class="title">Название учебного заведения:</div> <div id="b2l2d" class="des">МГТУ им. Н. Э. Баумана</div>
-                        <hr />
-                        <div id="b2l3t" class="title">Специальность:</div> <div id="b2l3d" class="des">Вычислительные машины, комплексы, системы и сети</div>
+        <div class="section" id="education">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="title" data-animate="fadeInDown">Образование</h2>
                     </div>
-                    <div class="img-holder">
-                        <img src="img/education-icon.png" id="b2i" alt="">
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </section>
 
-        <section id="three">
-            <div class="holder">
-                <div class="center">
-                    <div class="img-holder">
-                        <img src="img/skills-icon.png" id="b3i" alt="">
-                    </div>
-                    <div class="text-column">
-                        <h2 id="slide3Title">Навыки</h2>
-                        <div id="b3l1t" class="title">Веб программирование:</div> <div id="b3l1d" class="des">
-                            HTML5, CSS 3, JavaScript, PHP, Node.js
-                        </div>
-                        <hr />
-                        <div id="b3l2t" class="title">Базы данных:</div> <div id="b3l2d" class="des">
-                            MySQL, PostgreSQL, Redis, MongoDB
-                        </div>
-                        <hr />
-                        <div id="b3l3t" class="title">Веб-технологии:</div> <div id="b3l3d" class="des">
-                            Yii framework, Yii 2 framework, Git, AJAX, RequireJS, jQuery, Bootstrap, AngularJS, 
-                            Web Sockets, Twig, Memcache, Nginx, Apache, less, Gulp js
-                        </div>
-                        <hr />
-                        <div id="b3l4t" class="title">Прикладное программирование:</div> <div id="b3l4d" class="des">Java</div>
-                        <hr />
-                        <div id="b3l5t" class="title">Мобильное программирование:</div> <div id="b3l5d" class="des">Java for Android</div>
-                        <hr />
-                        <div id="b3l6t" class="title">Общие навыки:</div> <div id="b3l6d" class="des">
-                            Администрирование веб-сайтов, Adobe Photoshop, Windows OS, MAC OS X, Linux
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-8 text-left" data-animate="fadeInUp">
+                            	<table class="uni">
+                            		<tbody>
+                            			<tr>
+                            				<td class="left">Уровень образования:</td>
+                            				<td class="right">высшее</td>
+                            			</tr>
+                            			<tr>
+                            				<td class="left">Название учебного заведения:</td>
+                            				<td class="right">МГТУ им. Н. Э. Баумана</td>
+                            			</tr>
+                            			<tr>
+                            				<td class="left">Специальность:</td>
+                            				<td class="right">Вычислительные машины, комплексы, системы и сети</td>
+                            			</tr>
+                            		</tbody>
+                            	</table>
+                            </div>
+                            <div class="col-sm-4" data-animate="fadeInUp">
+                                <div class="icon"><i class="fa fa-graduation-cap"></i></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
+                    <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 mt-big" data-animate="bounceIn">
+                        <img src="img/bmstu-logo.png" class="image img-responsive" alt="">
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section id="four">
-            <div class="holder">
-                <div class="center">
-                    <h2 id="slide4Title">Примеры работ</h2>
-                    <div id="gallery">
-                        <div class="elem">
-                            <img class="" src="img/previews/med-serdce.png" alt="">
-                            <div class="text">
-                                <span>Интернет-магазин медицинской техники «Сердце»</span>
-                                <div class="link-holder">
-                                    <a data-href="img/sites/med-serdce.png">
-                                        <img class="zoom" src="img/zoom-icon.png" alt="">
-                                    </a>
-                                    <a href="http://med-serdce.ru/" target="_blank">
-                                        <img src="img/link-icon.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elem">
-                            <img class="" src="img/previews/beurer-live.png" alt="">
-                            <div class="text">
-                                <span>Официальный сайт компании «Beurer»</span>
-                                <div class="link-holder">
-                                    <a data-href="img/sites/beurer-live.png">
-                                        <img class="zoom" src="img/zoom-icon.png" alt="">
-                                    </a>
-                                    <a href="http://beurer-live.ru/" target="_blank">
-                                        <img src="img/link-icon.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elem">
-                            <img class="" src="img/previews/dom-otoplenie.png" alt="">
-                            <div class="text">
-                                <span>«Замена батарей отопления»</span>
-                                <div class="link-holder">
-                                    <a data-href="img/sites/dom-otoplenie.png">
-                                        <img class="zoom" src="img/zoom-icon.png" alt="">
-                                    </a>
-                                    <a href="http://dom-otoplenie.ru/" target="_blank">
-                                        <img src="img/link-icon.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elem">
-                            <img class="" src="img/previews/5pravil.png" alt="">
-                            <div class="text">
-                                <span>Интернет-магазин детских товаров «5 правил»</span>
-                                <div class="link-holder">
-                                    <a data-href="img/sites/5pravil.png">
-                                        <img class="zoom" src="img/zoom-icon.png" alt="">
-                                    </a>
-                                    <a href="http://5pravil.ru/" target="_blank">
-                                        <img src="img/link-icon.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elem">
-                            <img class="" src="img/previews/medisana-market.png" alt="">
-                            <div class="text">
-                                <span>Официальный интернет-магазин «Medisana-market»</span>
-                                <div class="link-holder">
-                                    <a data-href="img/sites/medisana-market.png">
-                                        <img class="zoom" src="img/zoom-icon.png" alt="">
-                                    </a>
-                                    <a href="http://medisana-market.ru/" target="_blank">
-                                        <img src="img/link-icon.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elem">
-                            <img class="" src="img/previews/milaya-ledy.png" alt="">
-                            <div class="text">
-                                <span>Интернет магазин «Милая Леди»</span>
-                                <div class="link-holder">
-                                    <a data-href="img/sites/milaya-ledy.png">
-                                        <img class="zoom" src="img/zoom-icon.png" alt="">
-                                    </a>
-                                    <a href="http://milaya-ledy.ru/" target="_blank">
-                                        <img src="img/link-icon.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elem">
-                            <img class="" src="img/previews/pl-beg.png" alt="">
-                            <div class="text">
-                                <span>Интернет-магазин детских товаров «Плюшевый бегемот»</span>
-                                <div class="link-holder">
-                                    <a data-href="img/sites/pl-beg.png">
-                                        <img class="zoom" src="img/zoom-icon.png" alt="">
-                                    </a>
-                                    <a href="http://pl-beg.ru/" target="_blank">
-                                        <img src="img/link-icon.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elem">
-                            <img class="" src="img/previews/arenda-kompressorov.png" alt="">
-                            <div class="text">
-                                <span>«Аренда компрессоров»</span>
-                                <div class="link-holder">
-                                    <a data-href="img/sites/arenda-kompressorov.png">
-                                        <img class="zoom" src="img/zoom-icon.png" alt="">
-                                    </a>
-                                    <a href="http://arenda-kompressorov.ru/" target="_blank">
-                                        <img src="img/link-icon.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elem">
-                            <img class="" src="img/previews/nov-vek.png" alt="">
-                            <div class="text">
-                                <span>Сайт компании «Новый Век»</span>
-                                <div class="link-holder">
-                                    <a data-href="img/sites/nov-vek.png">
-                                        <img class="zoom" src="img/zoom-icon.png" alt="">
-                                    </a>
-                                    <a href="http://nov-vek.ru/" target="_blank">
-                                        <img src="img/link-icon.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="elem">
-                            <img class="" src="img/previews/breathing-exercise.png" alt="">
-                            <div class="text">
-                                <span>Приложение «Тренировка дыхания» для Android</span>
-                                <div class="link-holder">
-                                    <a data-href="img/sites/breathing-exercise.png">
-                                        <img class="zoom" src="img/zoom-icon.png" alt="">
-                                    </a>
-                                    <a href="https://play.google.com/store/apps/details?id=com.breathing_exercise" target="_blank">
-                                        <img src="img/link-icon.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="section text-gradient" id="skills">
+            <div class="container">
+                <div class="col-md-12">
+                    <h2 class="title" data-animate="fadeInDown">Навыки</h2>
 
-        <section id="five">
-            <div class="holder">
-                <div class="center">
-                    <div class="text-column">
-                        <h2 id="slide5Title">Контакты</h2>
-                        <div id="b5l1t" class="title"><img src="img/male-icon.png" alt=""></div>
-                        <div id="b5l1d" class="des">Чуканцев Никита</div>
-                        <hr />
-                        <div id="b5l2t" class="title"><img src="img/address-icon.png" alt=""></div>
-                        <div id="b5l2d" class="des">Россия, Московская область, Электросталь</div>
-                        <hr />
-                        <div id="b5l3t" class="title"><img src="img/email-icon.png" alt=""></div>
-                        <div id="b5l3d" class="des"><a href="mailto:tpxtrime@mail.ru">tpxtrime@mail.ru</a></div>
-                        <hr />
-                        <div id="b5l4t" class="title"><img src="img/github-icon.png" alt=""></div>
-                        <div id="b5l4d" class="des"><a href="https://github.com/tpmanc" target="_blank">tpmanc</a></div>
+                    <div class="row skills">
+                        <div class="col-md-4" data-animate="fadeInUp">
+                            <div class="icon"><i class="fa fa-desktop"></i>
+                            </div>
+                            <h4 class="heading">Прикладное программирование</h4>
+                            <p>Java</p>
+                        </div>
+
+                        <div class="col-md-4" data-animate="fadeInUp">
+                            <div class="icon"><i class="fa fa-html5"></i>
+                            </div>
+                            <h4 class="heading">Веб программирование</h4>
+                            <p>HTML5, CSS 3, JavaScript, PHP, Node.js</p>
+                        </div>
+
+                        <div class="col-md-4" data-animate="fadeInUp">
+                            <div class="icon"><i class="fa fa-android"></i> 
+                            </div>
+                            <h4 class="heading">Мобильное программирование</h4>
+                            <p>Java for Android</p>
+                        </div>
                     </div>
-                    <div class="clearfix"></div>
+                    <div class="row skills">
+                        <div class="col-md-4" data-animate="fadeInUp">
+                            <div class="icon"><i class="fa fa-database"></i> 
+                            </div>
+                            <h4 class="heading">Базы данных</h4>
+                            <p>MySQL, PostgreSQL, Redis, MongoDB</p>
+                        </div>
+
+                        <div class="col-md-4" data-animate="fadeInUp">
+                            <div class="icon"><i class="fa fa-cogs"></i>
+                            </div>
+                            <h4 class="heading">Веб-технологии</h4>
+                            <p>
+                                Yii framework, Yii 2 framework, Git, AJAX, RequireJS, jQuery,
+                                 Bootstrap, AngularJS, Web Sockets, Twig, Memcache, Nginx, Apache, less, Gulp js
+                            </p>
+                        </div>
+
+                        <div class="col-md-4" data-animate="fadeInUp">
+                            <div class="icon"><i class="fa fa-keyboard-o"></i>
+                            </div>
+                            <h4 class="heading">Общие навыки</h4>
+                            <p>
+                                Администрирование веб-сайтов, Adobe Photoshop, Windows OS, MAC OS X, Linux
+                            </p>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div class="section" id="works">
+            <div class="container">
+                <div class="col-sm-12">
+
+                    <div class="mb20">
+                        <h2 class="title" data-animate="fadeInUp">Примеры работ</h2>
+                    </div>
+
+                    <ul id="filter" data-animate="fadeInUp">
+                        <li class="active"><a href="#" data-filter="all">Все</a></li>
+                        <li><a href="#" data-filter="ecommerce">Интернет-магазины</a></li>
+                        <li><a href="#" data-filter="bcard">Сайты-визитки</a></li>
+                        <li><a href="#" data-filter="android">Android</a></li>
+                    </ul>
+
+                    <div id="detail">
+                        <span class="close">&times;</span> 
+                        <div id="detail-slider"></div>
+                        <div class="text-center">
+                            <h1 id="detail-title">&nbsp;</h1>
+                        </div>
+                        <div id="detail-content"></div>
+                    </div>
+
+                    <div id="references-masonry" data-animate="fadeInUp">
+
+                        <div class="reference-item" data-category="ecommerce">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/med-serdce.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Сердце»</h3> 
+                                        <p>Интернет-магазин</p>
+                                    </div>
+                                </a>
+
+                                <div class="sr-only reference-description" data-images="img/works/gallery/med-serdce-1.jpg,img/works/gallery/med-serdce-2.jpg,img/works/gallery/med-serdce-3.jpg,img/works/gallery/med-serdce-4.jpg,img/works/gallery/med-serdce-5.jpg">
+
+                                    <p>Интернет-магазин товаров для здоровья от отечественных и мировых производителей.</p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://med-serdce.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="android">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/breathing-exercise.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Тренировка дыхания»</h3> 
+                                        <p>Приложение для Android</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                	class="sr-only reference-description"
+                                	data-images="img/works/gallery/breathing-exercise-1.jpg,img/works/gallery/breathing-exercise-2.jpg,img/works/gallery/breathing-exercise-3.jpg">
+
+                                    <p>
+                                        Приложение для Android для тренировки дыхания с помощью 
+                                        упражнений "Квадратное дыхание", "Треугольное дыхание" и "Ровное дыхание".
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="https://play.google.com/store/apps/details?id=com.breathing_exercise"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="ecommerce">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/pro-medic.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Pro-medic»</h3> 
+                                        <p>Интернет-магазин</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                	class="sr-only reference-description"
+                                	data-images="img/works/gallery/pro-medic-1.jpg,img/works/gallery/pro-medic-2.jpg,img/works/gallery/pro-medic-3.jpg,img/works/gallery/pro-medic-4.jpg">
+
+                                    <p>
+                                        Интернет-магазин медицинского оборудования для профессионального и домашнего использования.
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://www.pro-medic.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="ecommerce">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/beurer.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Beurer»</h3> 
+                                        <p>Интернет-магазин</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                	class="sr-only reference-description"
+                                	data-images="img/works/gallery/beurer-1.jpg,img/works/gallery/beurer-2.jpg,img/works/gallery/beurer-3.jpg,img/works/gallery/beurer-4.jpg">
+
+                                    <p>
+                                        Интернет-магазин компании Beurer, которая специализируется 
+                                        на производстве техники для комфорта и здоровья.
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://beurer.tv/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="bcard">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/dom-otoplenie.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Дом-отопление»</h3> 
+                                        <p>Сайт-визитка</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                	class="sr-only reference-description"
+                                	data-images="img/works/gallery/dom-otoplenie-1.jpg,img/works/gallery/dom-otoplenie-2.jpg,img/works/gallery/dom-otoplenie-3.jpg,img/works/gallery/dom-otoplenie-4.jpg,img/works/gallery/dom-otoplenie-5.jpg">
+
+                                    <p>
+                                        Сайт-визитка компании по замену батарей отопления.
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://dom-otoplenie.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="ecommerce">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/5pravil.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«5 правил»</h3> 
+                                        <p>Интернет-магазин</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                	class="sr-only reference-description"
+                                	data-images="img/works/gallery/5pravil-1.jpg,img/works/gallery/5pravil-2.jpg,img/works/gallery/5pravil-3.jpg,img/works/gallery/5pravil-4.jpg">
+
+                                    <p>
+                                        Интернет-магазин детских товаров.
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://5pravil.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="ecommerce">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/medisana-market.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Medisana»</h3> 
+                                        <p>Интернет-магазин</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                	class="sr-only reference-description"
+                                	data-images="img/works/gallery/medisana-market-1.jpg,img/works/gallery/medisana-market-2.jpg,img/works/gallery/medisana-market-3.jpg,img/works/gallery/medisana-market-4.jpg">
+
+                                    <p>
+                                        Официальный интернет-магазин «Medisana».
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://medisana-market.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="ecommerce">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/milaya-ledy.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Милая леди»</h3> 
+                                        <p>Интернет-магазин</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                	class="sr-only reference-description"
+                                	data-images="img/works/gallery/milaya-ledy-1.jpg,img/works/gallery/milaya-ledy-2.jpg,img/works/gallery/milaya-ledy-3.jpg,img/works/gallery/milaya-ledy-4.jpg">
+
+                                    <p>
+                                        Интернет-магазин товаров для женщин.
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://milaya-ledy.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="ecommerce">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/pl-beg.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Плюшевый бегемот»</h3> 
+                                        <p>Интернет-магазин</p>
+                                    </div>
+                                </a>
+
+                                <div
+	                                class="sr-only reference-description"
+	                                data-images="img/works/gallery/pl-beg-1.jpg,img/works/gallery/pl-beg-2.jpg,img/works/gallery/pl-beg-3.jpg">
+
+                                    <p>
+                                        Интернет-магазин товаров для детей.
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://pl-beg.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="bcard">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/arenda-kompressorov.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Аренда компрессора»</h3> 
+                                        <p>Сайт-визитка</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                	class="sr-only reference-description"
+                                	data-images="img/works/gallery/arenda-kompressorov-1.jpg,img/works/gallery/arenda-kompressorov-2.jpg,img/works/gallery/arenda-kompressorov-3.jpg">
+
+                                    <p>
+                                        Сайт-визитка компании, которая предоставляет аренду компрессоров.
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://arenda-kompressorov.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="bcard">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/nov-vek.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Новый век»</h3> 
+                                        <p>Сайт-визитка</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                	class="sr-only reference-description"
+                                	data-images="img/works/gallery/nov-vek-1.jpg,img/works/gallery/nov-vek-2.jpg">
+
+                                    <p>
+                                        Сайт-визитка фабрики по производству гофроупаковок.
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://nov-vek.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="ecommerce">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/beurer-live.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Beurer-live»</h3> 
+                                        <p>Интернет-магазин</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                	class="sr-only reference-description"
+                                	data-images="img/works/gallery/beurer-live-1.jpg,img/works/gallery/beurer-live-2.jpg,img/works/gallery/beurer-live-3.jpg,img/works/gallery/beurer-live-4.jpg">
+
+                                    <p>
+                                        Интернет-магазин бытовой техники компании Beurer.
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://beurer-live.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="ecommerce">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/a-brikos.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Абрикос»</h3> 
+                                        <p>Интернет-магазин</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                	class="sr-only reference-description"
+                                	data-images="img/works/gallery/a-brikos-1.jpg,img/works/gallery/a-brikos-2.jpg,img/works/gallery/a-brikos-3.jpg,img/works/gallery/a-brikos-4.jpg">
+
+                                    <p>
+                                        Интернет-магазин «Абрикос».
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://a-brikos.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="ecommerce">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/magformers.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Magformers»</h3> 
+                                        <p>Интернет-магазин</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                	class="sr-only reference-description"
+                                	data-images="img/works/gallery/magformers-1.jpg,img/works/gallery/magformers-2.jpg,img/works/gallery/magformers-3.jpg">
+
+                                    <p>
+                                        Интернет-магазин товаров фирмы «Magformers».
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://magformers.tv/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="ecommerce">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/armed-market.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Армед»</h3> 
+                                        <p>Интернет-магазин</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                	class="sr-only reference-description"
+                                	data-images="img/works/gallery/armed-market-1.jpg,img/works/gallery/armed-market-2.jpg,img/works/gallery/armed-market-3.jpg">
+
+                                    <p>
+                                        Интернет-магазин официального представителя фирмы «Армед».
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://armed-market.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="bcard">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/vallay.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Vallay»</h3> 
+                                        <p>Сайт-визитка</p>
+                                    </div>
+                                </a>
+
+                                <div class="sr-only reference-description" data-images="img/works/gallery/vallay-1.jpg">
+
+                                    <p>
+                                        Сайт-визитка аренды компрессоров с отбойными молотками.
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://www.vallay.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="bcard">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/ugol-rf.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«ОАО НТП Топливное предприятие»</h3> 
+                                        <p>Сайт-визитка</p>
+                                    </div>
+                                </a>
+
+                                <div
+	                                class="sr-only reference-description"
+	                                data-images="img/works/gallery/ugol-rf-1.jpg,img/works/gallery/ugol-rf-2.jpg">
+
+                                    <p>
+                                        Сайт-визитка компании, которая специализируется на продаже каменного и 
+                                        бурого угля, кокса и антрацита.
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://уголь-москва.рф/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="reference-item" data-category="bcard">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/stil-int-dop.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Стильные интерьеры»</h3> 
+                                        <p>Сайт-визитка</p>
+                                    </div>
+                                </a>
+
+                                <div
+	                                class="sr-only reference-description"
+	                                data-images="img/works/gallery/stil-int-dop-1.jpg,img/works/gallery/stil-int-dop-2.jpg,img/works/gallery/stil-int-dop-3.jpg,img/works/gallery/stil-int-dop-4.jpg">
+
+                                    <p>
+                                        Сайт-визитка мебельной фабрики «Стильные интерьеры», 
+                                        занимающейся изготовлением мебели на заказ.
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://stil-int-dop.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section text-parallax parallax-image1" id="contacts">
+            <div class="container">
+                <div class="row contacts">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="item">
+                            <div class="icon"><i class="fa fa-user"></i>
+                            </div>
+                            <h4>Чуканцев Никита</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="item">
+	                        <a href="mailto:tpxtrime@mail.ru">
+	                            <span class="icon">
+	                            	<i class="fa fa-envelope"></i>
+	                            </span>
+	                        </a>
+                            <h4><a href="mailto:tpxtrime@mail.ru">tpxtrime@mail.ru</a></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="item">
+                            <a class="round-link" href="http://vk.com/tpmanc" target="_blank">
+                                <span class="icon">
+                                    <i class="fa fa-vk"></i>
+                                </span>
+                            </a>
+                            <h4><a href="http://vk.com/tpmanc">vk</a></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="item">
+                            <a href="https://github.com/tpmanc" target="_blank">
+                                <div class="icon">
+                                    <i class="fa fa-github"></i>
+                                </div>
+                            </a>
+                            <h4><a href="https://github.com/tpmanc">github</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dark-mask"></div>
+        </div>
     </div>
-    <script>
 
+    <script src="production/main.min.js"></script>
 
-</script>
 </body>
+
 </html>

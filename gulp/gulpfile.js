@@ -4,7 +4,7 @@ var concat = require('gulp-concat');
 var csso = require('gulp-csso');
 var watch = require('gulp-watch');
 var autoprefixer = require('gulp-autoprefixer');
-// var imageop = require('gulp-image-optimization');
+var imageop = require('gulp-image-optimization');
 var uglify = require('gulp-uglify');
 
 gulp.task('less', function() {
@@ -20,20 +20,27 @@ gulp.task('less', function() {
 
 gulp.task('js', function() {
     gulp.src([
-            '../js/plugins/modernizr.js',
-            '../js/plugins/jquery-2.1.4.min.js',
-            '../js/plugins/jquery-migrate-1.2.1.min.js',
-            '../js/plugins/TweenMax.min.js',
-            '../js/plugins/jquery.ScrollMagic.min.js',
-            '../js/plugins/animation.gsap.min.js',
-            // '../js/plugins/debug.addIndicators.min.js',
-            '../js/plugins/ScrollToPlugin.min.js',
-            '../js/plugins/jquery.arcticmodal-0.3.min.js',
-            '../js/plugins/slick.min.js',
-            '../js/main.js',
+            '../js/modernizr-2.6.2.min.js',
+            '../js/jquery-1.11.0.min.js',
+            '../js/bootstrap.min.js',
+            '../js/jquery.cookie.js',
+            '../js/waypoints.min.js',
+            '../js/masonry.pkgd.min.js',
+            '../js/owl.carousel.min.js',
+            '../js/jquery.scrollTo.min.js',
+            '../js/jquery.counterup.min.js',
+            '../js/jquery.parallax-1.1.3.js',
+            '../js/front.js',
         ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
+    .pipe(gulp.dest('../production/'));
+});
+
+gulp.task('css', function() {
+    gulp.src(['../css/*.css'])
+    .pipe(concat('main.min.css'))
+    .pipe(csso())
     .pipe(gulp.dest('../production/'));
 });
 
@@ -50,7 +57,7 @@ gulp.task('watch', function() {
 
 
 gulp.task('img', function() {
-    gulp.src(['../img/**/*.png','../img/**/*.jpg','../img/**/*.gif','../img/**/*.jpeg'])
+    gulp.src(['../img/works/gallery/*.jpg'])
         .pipe(imageop({
             optimizationLevel: 5,
             progressive: true,
