@@ -25,6 +25,7 @@ gulp.task('js', function() {
             '../js/bootstrap.min.js',
             '../js/jquery.cookie.js',
             '../js/waypoints.min.js',
+            '../js/gmaps.js',
             '../js/masonry.pkgd.min.js',
             '../js/owl.carousel.min.js',
             '../js/jquery.scrollTo.min.js',

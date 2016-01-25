@@ -129,8 +129,8 @@ body,
   }
 }
 .text-parallax {
-  padding-top: 250px;
-  padding-bottom: 250px;
+  padding-top: 120px;
+  padding-bottom: 120px;
   -webkit-backface-visibility: hidden;
 }
 .text-parallax.parallax-image1 {
@@ -482,8 +482,10 @@ body,
 #footer p.social a.gplus {
   background-color: #c21f25;
 }
-#footer p.social a.instagram {
-  background-color: #cd4378;
+#footer p.social a.github {
+  background-color: #000;
+  border: 2px solid #fff;
+  line-height: 45px;
 }
 #footer p.social a.email {
   background-color: #4a7f45;
@@ -1532,6 +1534,10 @@ a.list-group-item.active > .badge,
 .progress-striped .progress-bar-danger {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+#map {
+  height: 400px;
 }
 
 
