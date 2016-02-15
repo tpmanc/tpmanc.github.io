@@ -90,6 +90,10 @@
                             				<td class="left">Уровень образования:</td>
                             				<td class="right">высшее</td>
                             			</tr>
+                                        <tr>
+                                            <td class="left">Дата обучения:</td>
+                                            <td class="right">2010 - 2016 г.</td>
+                                        </tr>
                             			<tr>
                             				<td class="left">Название учебного заведения:</td>
                             				<td class="right">МГТУ им. Н. Э. Баумана</td>
@@ -199,7 +203,8 @@
                             <h4 class="heading">Веб-технологии</h4>
                             <p>
                                 Yii framework, Yii 2 framework, Git, AJAX, RequireJS, jQuery,
-                                 Bootstrap, AngularJS, Web Sockets, Twig, Memcache, Nginx, Apache, less, Gulp js
+                                 Bootstrap, AngularJS, Web Sockets, Twig, Memcache, Nginx, Apache, 
+                                 less, Gulp js, Sphinx Search, Elasticsearch
                             </p>
                         </div>
 
@@ -231,6 +236,7 @@
                         <li><a href="#" data-filter="ecommerce">Интернет-магазины</a></li>
                         <li><a href="#" data-filter="bcard">Сайты-визитки</a></li>
                         <li><a href="#" data-filter="android">Android</a></li>
+                        <li><a href="#" data-filter="mobile">Мобильная версия сайта</a></li>
                     </ul>
 
                     <div id="detail">
@@ -243,6 +249,27 @@
                     </div>
 
                     <div id="references-masonry" data-animate="fadeInUp">
+                        <div class="reference-item" data-category="bcard">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/si-ninitsa.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Синица»</h3> 
+                                        <p>Сайт-визитка</p>
+                                    </div>
+                                </a>
+
+                                <div class="sr-only reference-description" data-images="img/works/gallery/si-ninitsa-1.jpg,img/works/gallery/si-ninitsa-2.jpg,img/works/gallery/si-ninitsa-3.jpg,img/works/gallery/si-ninitsa-4.jpg,img/works/gallery/si-ninitsa-5.jpg">
+
+                                    <p>Сайт компании «Синица digital solution» - создание и продвижение сайтов</p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://si-nitsa.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="reference-item" data-category="ecommerce">
                             <div class="reference">
@@ -255,7 +282,7 @@
                                     </div>
                                 </a>
 
-                                <div class="sr-only reference-description" data-images="img/works/gallery/med-serdce-1.jpg,img/works/gallery/med-serdce-2.jpg,img/works/gallery/med-serdce-3.jpg,img/works/gallery/med-serdce-4.jpg,img/works/gallery/med-serdce-5.jpg">
+                                <div class="sr-only reference-description" data-images="img/works/gallery/med-serdce-1.jpg,img/works/gallery/med-serdce-2.jpg,img/works/gallery/med-serdce-3.jpg,img/works/gallery/med-serdce-4.jpg">
 
                                     <p>Интернет-магазин товаров для здоровья от отечественных и мировых производителей.</p>
 
@@ -398,6 +425,28 @@
                             </div>
                         </div>
 
+                        <div class="reference-item" data-category="mobile">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/med-serdce-mobile.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Сердце»</h3> 
+                                        <p>Мобильная версия</p>
+                                    </div>
+                                </a>
+
+                                <div class="sr-only reference-description" data-images="img/works/gallery/med-serdce-mobile-1.jpg,img/works/gallery/med-serdce-mobile-2.jpg,img/works/gallery/med-serdce-mobile-3.jpg,img/works/gallery/med-serdce-mobile-4.jpg">
+
+                                    <p>Мобильная версия сайта интернет-магазина товаров для здоровья от отечественных и мировых производителей.</p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://med-serdce.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="reference-item" data-category="ecommerce">
                             <div class="reference">
                                 <a href="#">
@@ -497,6 +546,32 @@
 
                                     <p class="buttons">
                                         <a class="btn btn-primary" target="_blank" href="http://arenda-kompressorov.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reference-item" data-category="ecommerce">
+                            <div class="reference">
+                                <a href="#">
+                                    <img src="img/works/doctor-center.jpg" class="img-responsive" alt="" />
+
+                                    <div class="overlay">
+                                        <h3 class="reference-title">«Семейный доктор»</h3> 
+                                        <p>Интернет-магазин</p>
+                                    </div>
+                                </a>
+
+                                <div
+                                    class="sr-only reference-description"
+                                    data-images="img/works/gallery/doctor-center-1.jpg,img/works/gallery/doctor-center-2.jpg,img/works/gallery/doctor-center-3.jpg">
+
+                                    <p>
+                                        Интернет-магазин медтехники «Семейный доктор».
+                                    </p>
+
+                                    <p class="buttons">
+                                        <a class="btn btn-primary" target="_blank" href="http://www.doctor-center.ru/"><i class="fa fa-globe"></i> Перейти на сайт</a>
                                     </p>
                                 </div>
                             </div>

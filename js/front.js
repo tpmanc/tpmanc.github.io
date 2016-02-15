@@ -7,6 +7,11 @@ $(function () {
     counters();
     parallax();
     map();
+
+    var detailSlider = $('#detail-slider');
+    detailSlider.on('click', '.fancybox', function() {
+        detailSlider.find('.fancybox').fancybox();
+    });
     
     // google analitics
     try {
@@ -202,12 +207,13 @@ $('.reference-item').click(function (e) {
     var title = element.find('.reference-title').text();
     var description = element.find('.reference-description').html();
 
-    images = element.find('.reference-description').data('images').split(',');
+    var images = element.find('.reference-description').data('images').split(',');
+    var fullImages = element.find('.reference-description').data('fullimages').split(',');
 
     if (images.length > 0) {
         slider = '';
         for (var i = 0; i < images.length; ++i) {
-            slider = slider + '<div class="item"><img src=' + images[i] + ' alt="" class="img-responsive"></div>';
+            slider = slider + '<div class="item"><a class="fancybox" rel="group" href="'+fullImages[i]+'"><img src=' + images[i] + ' alt="" class="img-responsive"></a></div>';
         }
     } else {
        slider = '';
