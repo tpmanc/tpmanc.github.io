@@ -9,8 +9,19 @@ $(function () {
     map();
 
     var detailSlider = $('#detail-slider');
-    detailSlider.on('click', '.fancybox', function() {
-        detailSlider.find('.fancybox').fancybox();
+    detailSlider.on('click', '.zoom', function() {
+        var imageUrl = $(this).data('full');
+        var img = new Image();
+        img.src = imageUrl;
+        img.onload = function() {
+            var c = $('<div class="box-modal" />');
+            c.html(img);
+            c.prepend('<div class="box-modal_close arcticmodal-close">X</div>');
+            $.arcticmodal({
+                content: c
+            });
+        };
+        img.src = imageUrl;
     });
     
     // google analitics
@@ -213,7 +224,7 @@ $('.reference-item').click(function (e) {
     if (images.length > 0) {
         slider = '';
         for (var i = 0; i < images.length; ++i) {
-            slider = slider + '<div class="item"><a class="fancybox" rel="group" href="'+fullImages[i]+'"><img src=' + images[i] + ' alt="" class="img-responsive"></a></div>';
+            slider = slider + '<div class="item"><div class="zoom" data-full="'+fullImages[i]+'"><img src=' + images[i] + ' alt="" class="img-responsive"></div></div>';
         }
     } else {
        slider = '';
