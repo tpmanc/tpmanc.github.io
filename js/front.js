@@ -1,12 +1,16 @@
 $(function () {
-    animations();
-    sliders();
-    fullScreenContainer();
-    utils();
-    sliding();
-    counters();
-    parallax();
-    map();
+    try {
+        animations();
+        sliders();
+        fullScreenContainer();
+        utils();
+        sliding();
+        counters();
+        parallax();
+        map();
+    } catch (err) {
+        console.log(err);
+    }
 
     var detailSlider = $('#detail-slider');
     detailSlider.on('click', '.zoom', function() {
@@ -23,6 +27,32 @@ $(function () {
         };
         img.src = imageUrl;
     });
+
+    var workSlider = $('#work-slider');
+    if (workSlider.length > 0) {
+        workSlider.owlCarousel({
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            autoPlay: true,
+            stopOnHover: true,
+            singleItem: true,
+            afterInit: ''
+        });
+        workSlider.find('.zoom').on('click', function(){
+            var imageUrl = $(this).data('full');
+            var img = new Image();
+            img.src = imageUrl;
+            img.onload = function() {
+                var c = $('<div class="box-modal" />');
+                c.html(img);
+                c.prepend('<div class="box-modal_close arcticmodal-close">X</div>');
+                $.arcticmodal({
+                    content: c
+                });
+            };
+            img.src = imageUrl;
+        });
+    }
     
     // google analitics
     try {
