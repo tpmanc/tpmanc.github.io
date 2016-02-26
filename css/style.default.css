@@ -384,6 +384,10 @@ body,
   filter: alpha(opacity=0);
   text-align: left;
 }
+#detail.single-work {
+  display: block;
+  opacity: 1;
+}
 #detail .close {
   position: relative;
   font-size: 50px;
@@ -459,6 +463,35 @@ body,
   margin-top: 100px;
 }
 .contacts.mt-soc .item {
+  margin-bottom: 20px;
+}
+
+
+//
+.technologies {
+  position: relative;
+  z-index: 2;
+}
+.technologies .item {
+  text-align: center;
+}
+.technologies .item .icon {
+  display: inline-block;
+  width: 50px;
+  height: 55px;
+  line-height: 68px;
+  font-size: 22px;
+}
+.technologies .item h4 {
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 10px 0;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.technologies .item a {
+  color: #FFF;
+}
+.technologies.mt-soc .item {
   margin-bottom: 20px;
 }
 
