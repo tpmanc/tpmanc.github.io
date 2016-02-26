@@ -50,7 +50,7 @@
                     <li><a href="#contacts">Контакты</a></li>
                     <li><a href="#skills">Навыки</a></li>
                     <li><a href="#works">Примеры работ</a></li>
-                    
+                    <li><a href="#message">Связаться</a></li>
                 </ul>
             </div>
         </div>
@@ -828,6 +828,38 @@
         </div>
 
         <div class="section" id="map"></div>
+
+        <div class="section contact" id="message" data-animate="bounceIn">
+            <div class="container">
+                <div class="col-md-12">
+                    <h2 class="title">Связаться</h2>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <form id="contact-form" method="post" action="contact.php">
+                                <div class="messages"></div>
+
+                                <div class="controls">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="text" name="name" class="form-control" placeholder="Ваше имя *" required="required">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" name="email" class="form-control" placeholder="Ваш Email *" required="required">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <textarea name="message" class="form-control" placeholder="Сообщение *" rows="4" required="required"></textarea>
+                                        </div>
+                                        <div class="col-md-12 text-center">
+                                            <input type="submit" class="btn btn-primary btn-lg" value="Отправить">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="section" id="footer">
             <div class="container">
